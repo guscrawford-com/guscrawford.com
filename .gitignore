@@ -6,3 +6,10 @@
 **/.nyc_output
 **/coverage
 .coverage
+**/*.untracked
+**/*.log
+api/public/ui
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

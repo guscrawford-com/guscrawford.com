@@ -1,5 +1,5 @@
 import { TS } from "../services/timestamp";
-import { Protection } from './session.config';
+//import { Protection } from './session.config';
 const express = require('express');
 const createError = require('http-errors');
 export const config = function (app:any) {
@@ -20,7 +20,7 @@ export class RouteFactory {
         public routeMap:{
             [key:string]: RoutePath
         },
-        public sessionProtection?:Protection
+        public sessionProtection?:any
     ) {
         Object.keys(this.routeMap).forEach(routePath=>{
             this.mapRoutePath(routePath);
@@ -40,7 +40,7 @@ export class RouteFactory {
     }
     private handle(routerArguments:any[], routePath:string, method:string) {
         routerArguments.push(
-            this.routeMap[routePath][method][`$handle_${method}_${this.path}${routePath}`] = async (request:any, response:any, next:any)=>{
+            (this.routeMap[routePath][method] as any)[`$handle_${method}_${this.path}${routePath}`] = async (request:any, response:any, next:any)=>{
                 var result;
                 try {
                     result = await this.routeMap[routePath][method](request, response, next);
