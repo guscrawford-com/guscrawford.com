@@ -3,20 +3,39 @@ import { CommonModule } from '@angular/common';
 import {
   MatButtonModule,
   MatCheckboxModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatMenuModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatCardModule, MatCard
 } from '@angular/material';
+import {
+  ScrollDispatchModule
+} from '@angular/cdk/scrolling';
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+
+    //CDK
+    ScrollDispatchModule
   ],
   exports: [
     MatButtonModule,
     MatCheckboxModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatCardModule,
+
+    //CDK
+    ScrollDispatchModule
   ],
 })
 export class UsesNgMaterialModule { }

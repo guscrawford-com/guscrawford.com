@@ -33,12 +33,13 @@ module.exports = {
       watch:'./dist/bin',
       env: require('./local-env')
     }
-    // ,{
-    //   name:'angular app',
-    //   cwd:'angular-app',
-    //   script:'yarn start',
-    //   env: require('./local-env')
-    // }
+    ,{
+      name:'ui',
+      cwd:'ui',
+      script:'node_modules/@angular/cli/lib/init.js',
+      env: require('./local-env'),
+      args:'serve'
+    }
   ],
 
   /**

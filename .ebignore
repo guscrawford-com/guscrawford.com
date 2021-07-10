@@ -1,0 +1,9 @@
+**/*
+!api/node_modules/**
+!api/dist/**
+!api/public/**
+!api/private/**
+!api/translations/**
+!api/views/**
+!**/package.json
+!.ebextensions/**

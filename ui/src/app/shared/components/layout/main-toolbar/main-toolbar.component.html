@@ -1,4 +1,7 @@
-<p>
-  main-toolbar works!
-</p>
-<mat-toolbar>guscrawford.com</mat-toolbar>
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="toggleMenu($event)">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <ng-content></ng-content>
+  </mat-toolbar>
